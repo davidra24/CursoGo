@@ -7,5 +7,5 @@ func main() {
 	var name string
 	fmt.Print("Escribe tu nombre: ")
 	fmt.Scanf("%s", &name)
-	fmt.Println("Hola ", name)
+	fmt.Printf("Hola %s, bienvenido al mundo de GO \n", name)
 }
