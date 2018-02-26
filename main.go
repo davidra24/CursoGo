@@ -3,6 +3,9 @@ package main
 //fmt imprime en pantalla
 import "fmt"
 
-func main(){
-	fmt.Print("Hola mundo");
+func main() {
+	var name string
+	fmt.Print("Escribe tu nombre: ")
+	fmt.Scanf("%s", &name)
+	fmt.Println("Hola ", name)
 }
