@@ -10,9 +10,13 @@ func main() {
 	name := getName()
 	number := sum(50, 50)
 	a, b, c := getVariables()
+	integer1, integer2, integer3 := getIntegers()
+	float1, float2 := getFloats()
 	fmt.Printf(helloWorld, name, lastname)
 	fmt.Print("Hola mundo")
 	fmt.Println(number, a, b, c)
+	fmt.Println(integer1, integer2, integer3)
+	fmt.Println(float1, float2)
 }
 
 func getName() string {
@@ -24,7 +28,7 @@ func getName() string {
 }
 
 func getIntegers() (int, int32, int64) {
-	return 10, 2147000000, 9031313131313131313
+	return 10, 2147000000, 90313131313131313
 }
 
 func getFloats() (float32, float64) {
