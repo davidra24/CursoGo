@@ -12,11 +12,24 @@ func main() {
 	a, b, c := getVariables()
 	integer1, integer2, integer3 := getIntegers()
 	float1, float2 := getFloats()
+	stringUTF8 := getUnitCode()
 	fmt.Printf(helloWorld, name, lastname)
 	fmt.Print("Hola mundo")
 	fmt.Println(number, a, b, c)
 	fmt.Println(integer1, integer2, integer3)
 	fmt.Println(float1, float2)
+	fmt.Println("Cadena UTF-8: ", stringUTF8)
+	//Retorna el ASCII del char en posicion 0
+	println("Hola"[0])
+	//Retorna el char de la posicion 0
+	println(string("Hola"[0]))
+	//Cantidad de letras y/o carateres de un string
+	println("Hola tiene: ", len("Hola"), " carácteres")
+}
+
+//GO maneja UTF-8 nativo
+func getUnitCode() string {
+	return "もしもし！"
 }
 
 func getName() string {
