@@ -25,6 +25,10 @@ func main() {
 	println(string("Hola"[0]))
 	//Cantidad de letras y/o carateres de un string
 	println("Hola tiene: ", len("Hola"), " carácteres")
+	//Imprime array
+	getArray()
+	getArray2()
+	getSlide()
 }
 
 //GO maneja UTF-8 nativo
@@ -54,4 +58,22 @@ func getVariables() (int, int, int) {
 
 func sum(a int, b int) int {
 	return a + b
+}
+
+func getArray() {
+	var arr1 [2]string
+	arr1[0] = "Espacio 0 de array"
+	arr1[1] = "Espacio 1 de array"
+	fmt.Println(arr1)
+}
+
+func getArray2() {
+	arr2 := [3]int{1, 2, 3}
+	fmt.Println(arr2)
+}
+
+func getSlide() {
+	var slice1 []string
+	slice1 = append(slice1, "mi", "slice", "1")
+	fmt.Println(slice1)
 }
