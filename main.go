@@ -29,6 +29,8 @@ func main() {
 	getArray()
 	getArray2()
 	getSlide()
+	ifTest()
+	forTest()
 }
 
 //GO maneja UTF-8 nativo
@@ -76,4 +78,45 @@ func getSlide() {
 	var slice1 []string
 	slice1 = append(slice1, "mi", "slice", "1")
 	fmt.Println(slice1)
+}
+
+func ifTest() {
+	var numb int
+	fmt.Print("Ingresa un numero del 1 al 10: ")
+	fmt.Scanf("%d", &numb)
+	if numb%2 == 0 {
+		fmt.Println("El numero es par")
+	} else {
+		fmt.Println("El numero es impar")
+	}
+	if numb2 := numbr2(); numb2 == 3 {
+		fmt.Println("Entró al condicional")
+	}
+}
+
+func numbr2() int {
+	return 3
+}
+
+func forTest() {
+	for i := 0; i < 5; i++ {
+		fmt.Println("FOR: ", i)
+	}
+	//FOR.. while(?)
+	h := 100
+	for h > 0 {
+		h -= 10
+		fmt.Println("FOR: Solo cun una condicion de H > 0:", h)
+	}
+	//Ciclo infinito
+	s := 10
+	for {
+		fmt.Println("Bucle infinito")
+		if s == 0 {
+			break
+		} else {
+			s--
+		}
+
+	}
 }
