@@ -35,6 +35,7 @@ func main() {
 	structs.GetArray2()
 	structs.GetSlice()
 
+	//Uso del package flow
 	flow.IfTest()
 	flow.ForTest()
 	flow.SwitchExample()
