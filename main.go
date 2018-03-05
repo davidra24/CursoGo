@@ -1,6 +1,10 @@
 package main
 
-import "fmt"
+//Si no se utilzia una libreria no va a compilar
+import (
+	"fmt"
+	"strings"
+)
 
 const helloWorld string = "Hola %s %s, bienvenido al fascinante mundo de Go.\n"
 const testConst = "Test"
@@ -31,6 +35,8 @@ func main() {
 	getSlide()
 	ifTest()
 	forTest()
+	strings2()
+	switchExample()
 }
 
 //GO maneja UTF-8 nativo
@@ -119,4 +125,40 @@ func forTest() {
 		}
 
 	}
+}
+
+//Operaciones con cadenas
+func strings2() {
+	var text = "Todo en mayusculas"
+	fmt.Println(strings.ToUpper(text))
+	text = "Todo en minusculas"
+	fmt.Println(strings.ToLower(text))
+	text = "Hello world, Hello GoLang, Hello amigo"
+	fmt.Println(text)
+	//variable, texto cambio, texto nuevo, -1 cambia todas las coincidencias
+	fmt.Println(strings.Replace(text, "Hello", "Hola", -1))
+	//Split function
+	fmt.Println(strings.Split(text, ","))
+	fmt.Println(strings.Split(text, " "))
+	fmt.Println(strings.Split(text, ", "))
+}
+
+//Switch
+func switchExample() {
+	var number = 0
+	fmt.Print("SWITCH: Ingresa un numero del 1 al 10: ")
+	fmt.Scanf("%d", &number)
+	switch number {
+	case 1:
+		fmt.Println("El numero es 1")
+	default:
+		fmt.Println("El numero no es 1")
+	}
+	switch {
+	case number%2 == 0:
+		fmt.Println("El numero es par")
+	default:
+		fmt.Println("El numero es impar")
+	}
+	//Recomendacion de Google: Si un If pasa más de dos condiciones se debe usar el switch
 }
